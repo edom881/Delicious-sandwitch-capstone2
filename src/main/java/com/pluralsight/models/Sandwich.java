@@ -16,6 +16,11 @@ public class Sandwich {
         this.bread = bread;
         this.size = size;
         this.toasted = toasted;
+
+        this.meats = new ArrayList<>();
+        this.cheeses = new ArrayList<>();
+        this.toppings = new ArrayList<>();
+        this.sauces = new ArrayList<>();
     }
 
     public String getSummary() {
