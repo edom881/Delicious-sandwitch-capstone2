@@ -53,6 +53,16 @@ public class Sandwich {
     public void addSauce(String sauce) {
         sauces.add(sauce);
     }
+    // returns formatted sandwich information
+    public String getSummary() {
+
+        return size + "\" " + bread + " sandwich\n" +
+                "Toasted: " + toasted + "\n" +
+                "Meats: " + meats + "\n" +
+                "Cheeses: " + cheeses + "\n" +
+                "Toppings: " + toppings + "\n" +
+                "Sauces: " + sauces;
+    }
 
     }
 
