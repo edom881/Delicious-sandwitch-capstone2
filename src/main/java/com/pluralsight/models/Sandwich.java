@@ -21,6 +21,22 @@ public class Sandwich {
         this.cheeses = new ArrayList<>();
         this.toppings = new ArrayList<>();
         this.sauces = new ArrayList<>();
+
+    }
+    public void addMeat(String meat) {
+        meats.add(meat);
+    }
+
+    public void addCheese(String cheese) {
+        cheeses.add(cheese);
+    }
+
+    public void addTopping(String topping) {
+        toppings.add(topping);
+    }
+
+    public void addSauce(String sauce) {
+        sauces.add(sauce);
     }
 
     public String getSummary() {
