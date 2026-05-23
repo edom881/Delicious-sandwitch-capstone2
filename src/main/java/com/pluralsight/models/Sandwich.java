@@ -15,4 +15,5 @@ public class Sandwich {
         return size + "\" " + bread + " sandwich" +
                 (toasted ? " toasted" : " not toasted");
     }
+
 }
