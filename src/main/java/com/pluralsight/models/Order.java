@@ -20,6 +20,20 @@ public class Order {
         this.drinks = new ArrayList<>();
         this.chips = new ArrayList<>();
     }
+    // adds sandwich to order
+    public void addSandwich(Sandwich sandwich) {
+        sandwiches.add(sandwich);
+    }
+
+    // adds drink to order
+    public void addDrink(Drink drink) {
+        drinks.add(drink);
+    }
+
+    // adds chips to order
+    public void addChips(Chips chip) {
+        chips.add(chip);
+    }
 
 }
 
