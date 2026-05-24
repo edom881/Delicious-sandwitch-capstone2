@@ -38,6 +38,16 @@ public class Sandwich {
 
         // stores total sandwich price
         private double price;
+        // sets base sandwich price based on size
+        if (size == 4) {
+            price = 5.50;
+        }
+        else if (size == 8) {
+            price = 7.00;
+        }
+        else if (size == 12) {
+            price = 8.50;
+        }
     }
     // adds meat to sandwich
     public void addMeat(String meat) {
