@@ -1,7 +1,7 @@
 package com.pluralsight;
 
 import com.pluralsight.models.Order;
-
+import com.pluralsight.models.Drink;
 import java.util.Scanner;
 
 public class Application {
@@ -58,7 +58,16 @@ public class Application {
                     System.out.println("Add Sandwich selected.");
                     break;
                 case "2":
-                    System.out.println("Add Drink selected.");
+                    System.out.print("Enter drink flavor: ");
+                    String flavor = scanner.nextLine();
+
+                    System.out.print("Enter drink size (small, medium, large): ");
+                    String size = scanner.nextLine();
+
+                    Drink drink = new Drink(flavor, size);
+                    order.addDrink(drink);
+
+                    System.out.println("Drink added to order.");
                     break;
                 case "3":
                     System.out.println("Add Chips selected.");
