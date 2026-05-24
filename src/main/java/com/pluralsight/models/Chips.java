@@ -7,5 +7,11 @@ public class Chips {
 
     // stores chips price
     private double price;
+
+    // constructor used to create chips object
+    public Chips(String type) {
+        this.type = type;
+        this.price = 1.50;
+    }
 }
 
