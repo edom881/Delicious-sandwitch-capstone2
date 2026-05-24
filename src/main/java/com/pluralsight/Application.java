@@ -4,6 +4,7 @@ import com.pluralsight.models.Order;
 import com.pluralsight.models.Drink;
 import java.util.Scanner;
 import com.pluralsight.models.Chips;
+import com.pluralsight.models.Sandwich;
 
 public class Application {
 
@@ -24,8 +25,9 @@ public class Application {
             switch (choice) {
 
                 case "1":
-                    System.out.println("showOrderScreen();");
+                    showOrderScreen();
                     break;
+
 
                 case "0":
                     running = false;
@@ -55,8 +57,24 @@ public class Application {
             String orderChoice = scanner.nextLine();
 
             switch (orderChoice) {
+
                 case "1":
-                    System.out.println("Add Sandwich selected.");
+                    System.out.print("Enter bread type (white, wheat, rye, wrap): ");
+                    String bread = scanner.nextLine();
+
+                    System.out.print("Enter sandwich size (4, 8, 12): ");
+                    int sandwichSize = Integer.parseInt(scanner.nextLine());
+
+                    System.out.print("Would you like it toasted? (yes/no): ");
+                    String toastedAnswer = scanner.nextLine();
+
+                    boolean toasted = toastedAnswer.equalsIgnoreCase("yes");
+
+                    Sandwich sandwich = new Sandwich(bread, sandwichSize, toasted);
+
+                    order.addSandwich(sandwich);
+
+                    System.out.println("Sandwich added to order.");
                     break;
                 case "2":
                     System.out.print("Enter drink flavor: ");
