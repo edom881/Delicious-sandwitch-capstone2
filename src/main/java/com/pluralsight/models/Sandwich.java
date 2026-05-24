@@ -102,6 +102,10 @@ public class Sandwich {
                 "Toppings: " + toppings + "\n" +
                 "Sauces: " + sauces;
     }
+    // returns sandwich total price
+    public double getPrice() {
+        return price;
+    }
 
     }
 
