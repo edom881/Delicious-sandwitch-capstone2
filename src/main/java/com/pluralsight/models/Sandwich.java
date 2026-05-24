@@ -100,7 +100,7 @@ public class Sandwich {
                 "Meats: " + meats + "\n" +
                 "Cheeses: " + cheeses + "\n" +
                 "Toppings: " + toppings + "\n" +
-                "Sauces: " + sauces;
+                "Sauces: " + sauces + "\n" +
                 "Price: $" + String.format("%.2f", price);
 
     }
