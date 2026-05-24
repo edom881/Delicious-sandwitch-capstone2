@@ -56,6 +56,31 @@ public class Order {
 
         return total;
     }
+    // returns full formatted order summary
+    public String getOrderSummary() {
+
+        String summary = "===== ORDER SUMMARY =====\n";
+
+        // display sandwiches
+        for (Sandwich sandwich : sandwiches) {
+            summary += sandwich.getSummary() + "\n\n";
+        }
+
+        // display drinks
+        for (Drink drink : drinks) {
+            summary += drink.getSummary() + "\n";
+        }
+
+        // display chips
+        for (Chips chip : chips) {
+            summary += chip.getSummary() + "\n";
+        }
+
+        summary += "\nTotal Price: $" +
+                String.format("%.2f", getTotal());
+
+        return summary;
+    }
 
 }
 
