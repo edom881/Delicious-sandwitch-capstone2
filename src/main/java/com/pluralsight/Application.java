@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import com.pluralsight.models.Order;
+
 import java.util.Scanner;
 
 public class Application {
@@ -37,7 +39,7 @@ public class Application {
     }
 
     public static void showOrderScreen() {
-
+        Order order = new Order();
         boolean ordering = true;
 
         while (ordering) {
