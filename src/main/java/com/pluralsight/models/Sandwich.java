@@ -36,6 +36,8 @@ public class Sandwich {
         this.toppings = new ArrayList<>();
         this.sauces = new ArrayList<>();
 
+        // stores total sandwich price
+        private double price;
     }
     // adds meat to sandwich
     public void addMeat(String meat) {
