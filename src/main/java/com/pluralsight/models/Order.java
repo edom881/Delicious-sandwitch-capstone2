@@ -34,6 +34,28 @@ public class Order {
     public void addChips(Chips chip) {
         chips.add(chip);
     }
+    // calculates full order total
+    public double getTotal() {
+
+        double total = 0;
+
+        // adds sandwich prices
+        for (Sandwich sandwich : sandwiches) {
+            total += sandwich.getPrice();
+        }
+
+        // adds drink prices
+        for (Drink drink : drinks) {
+            total += drink.getPrice();
+        }
+
+        // adds chips prices
+        for (Chips chip : chips) {
+            total += chip.getPrice();
+        }
+
+        return total;
+    }
 
 }
 
