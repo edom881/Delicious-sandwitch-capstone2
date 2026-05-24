@@ -33,4 +33,8 @@ public class Drink {
         return size + " " + flavor +
                 " drink - $" + String.format("%.2f", price);
     }
+    // returns drink price
+    public double getPrice() {
+        return price;
+    }
 }
