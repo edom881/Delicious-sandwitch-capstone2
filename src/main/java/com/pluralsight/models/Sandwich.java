@@ -24,11 +24,16 @@ public class Sandwich {
     // stores sauces selected by customer
     private ArrayList<String> sauces;
 
+    // stores total sandwich price
+    private double price;
+
     // constructor used to create a sandwich object
     public Sandwich(String bread, int size, boolean toasted) {
         this.bread = bread;
         this.size = size;
         this.toasted = toasted;
+
+
 
         // initialize ArrayLists for sandwich ingredients
         this.meats = new ArrayList<>();
@@ -36,8 +41,7 @@ public class Sandwich {
         this.toppings = new ArrayList<>();
         this.sauces = new ArrayList<>();
 
-        // stores total sandwich price
-        private double price;
+
         // sets base sandwich price based on size
         if (size == 4) {
             price = 5.50;
@@ -52,7 +56,18 @@ public class Sandwich {
     // adds meat to sandwich
     public void addMeat(String meat) {
         meats.add(meat);
+        // adds meat price based on sandwich size
+        if (size == 4) {
+            price += 1.00;
+        }
+        else if (size == 8) {
+            price += 2.00;
+        }
+        else if (size == 12) {
+            price += 3.00;
+        }
     }
+
     // adds cheese to sandwich
     public void addCheese(String cheese) {
         cheeses.add(cheese);
