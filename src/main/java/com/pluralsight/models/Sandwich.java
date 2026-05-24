@@ -101,6 +101,8 @@ public class Sandwich {
                 "Cheeses: " + cheeses + "\n" +
                 "Toppings: " + toppings + "\n" +
                 "Sauces: " + sauces;
+                "Price: $" + String.format("%.2f", price);
+
     }
     // returns sandwich total price
     public double getPrice() {
