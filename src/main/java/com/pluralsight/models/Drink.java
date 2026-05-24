@@ -27,4 +27,10 @@ public class Drink {
             price = 3.00;
         }
     }
+    // returns formatted drink information
+    public String getSummary() {
+
+        return size + " " + flavor +
+                " drink - $" + String.format("%.2f", price);
+    }
 }
