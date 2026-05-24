@@ -13,5 +13,14 @@ public class Chips {
         this.type = type;
         this.price = 1.50;
     }
+    // returns formatted chips information
+    public String getSummary() {
+        return type + " chips - $" + String.format("%.2f", price);
+    }
+
+    // returns chips price
+    public double getPrice() {
+        return price;
+    }
 }
 
