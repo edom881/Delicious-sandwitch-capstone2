@@ -71,6 +71,18 @@ public class Sandwich {
     // adds cheese to sandwich
     public void addCheese(String cheese) {
         cheeses.add(cheese);
+
+        // adds cheese price based on sandwich size
+        if (size == 4) {
+            price += 0.75;
+        }
+        else if (size == 8) {
+            price += 1.50;
+        }
+        else if (size == 12) {
+            price += 2.25;
+        }
+
     }
     // adds regular topping to sandwich
     public void addTopping(String topping) {
