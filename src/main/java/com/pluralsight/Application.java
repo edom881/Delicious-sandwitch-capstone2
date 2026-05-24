@@ -98,7 +98,26 @@ public class Application {
                     System.out.println("Chips added to order.");
                     break;
                 case "4":
-                    System.out.println("Checkout selected.");
+                    System.out.println("\n===== CHECKOUT =====");
+                    System.out.println(order.getOrderSummary());
+
+                    System.out.println("\n1) Confirm");
+                    System.out.println("0) Cancel");
+
+                    System.out.print("Enter choice: ");
+                    String checkoutChoice = scanner.nextLine();
+
+                    if (checkoutChoice.equals("1")) {
+
+                        System.out.println("Order confirmed!");
+
+                        ordering = false;
+                    }
+                    else {
+
+                        System.out.println("Returning to order screen.");
+                    }
+
                     break;
                 case "0":
                     ordering = false;
