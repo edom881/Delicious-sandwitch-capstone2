@@ -64,6 +64,11 @@ public class Application {
 
                     Sandwich sandwich = new Sandwich(bread, sandwichSize, toasted);
 
+                    System.out.println("Add meats one at a time. Type done when finished.");
+
+
+                    }
+
                     order.addSandwich(sandwich);
 
                     System.out.println("Sandwich added to order.");
