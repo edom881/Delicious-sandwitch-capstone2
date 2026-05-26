@@ -83,6 +83,16 @@ public class Application {
                     System.out.println("Sandwich added to order.");
 
                     System.out.println("Add cheeses one at a time. Type done when finished.");
+                    while (true) {
+                        System.out.print("Enter cheese (american, provolone, cheddar, swiss): ");
+                        String cheese = scanner.nextLine();
+
+                        if (cheese.equalsIgnoreCase("done")) {
+                            break;
+                        }
+
+                        sandwich.addCheese(cheese);
+                    }
 
                     break;
                 case "2":
