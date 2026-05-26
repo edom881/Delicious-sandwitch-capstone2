@@ -102,6 +102,8 @@ public class Application {
                         if (topping.equalsIgnoreCase("done")) {
                             break;
                         }
+                        sandwich.addTopping(topping);
+                    }
 
 
                     break;
