@@ -96,7 +96,12 @@ public class Application {
                             break;
                         }
 
-                        sandwich.addCheese(cheese);
+                        System.out.print("Would you like extra cheese? (yes/no): ");
+                        String extraCheeseAnswer = scanner.nextLine();
+
+                        boolean extraCheese = extraCheeseAnswer.equalsIgnoreCase("yes");
+
+                        sandwich.addCheese(cheese, extraCheese);
                     }
 
                     System.out.println("Add regular toppings one at a time. Type done when finished.");
