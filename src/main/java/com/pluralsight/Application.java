@@ -110,6 +110,8 @@ public class Application {
 
                     if (checkoutChoice.equals("1")) {
 
+                        ReceiptWriter.saveReceipt(order);
+
                         System.out.println("Order confirmed!");
 
                         ordering = false;
