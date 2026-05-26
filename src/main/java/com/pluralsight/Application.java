@@ -104,7 +104,15 @@ public class Application {
                         }
                         sandwich.addTopping(topping);
                     }
+                    System.out.println("Add sauces one at a time. Type done when finished.");
 
+                    while (true) {
+                        System.out.print("Enter sauce (mayo, mustard, ketchup, ranch, thousand islands, vinaigrette): ");
+                        String sauce = scanner.nextLine();
+
+                        if (sauce.equalsIgnoreCase("done")) {
+                            break;
+                        }
 
                     break;
                 case "2":
