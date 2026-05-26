@@ -94,6 +94,16 @@ public class Application {
                         sandwich.addCheese(cheese);
                     }
 
+                    System.out.println("Add regular toppings one at a time. Type done when finished.");
+                    while (true) {
+                        System.out.print("Enter topping (lettuce, peppers, onions, tomatoes, jalapeños, cucumbers, pickles, guacamole, mushrooms): ");
+                        String topping = scanner.nextLine();
+
+                        if (topping.equalsIgnoreCase("done")) {
+                            break;
+                        }
+
+
                     break;
                 case "2":
                     System.out.print("Enter drink flavor: ");
