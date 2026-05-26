@@ -57,8 +57,23 @@ public class Application {
         while (ordering) {
 
 
-            String orderChoice =  ui.showOrderScreen();
+            String orderChoice;
 
+            while (true) {
+
+                orderChoice = ui.showOrderScreen();
+
+                if (orderChoice.equals("1") ||
+                        orderChoice.equals("2") ||
+                        orderChoice.equals("3") ||
+                        orderChoice.equals("4") ||
+                        orderChoice.equals("0")) {
+
+                    break;
+                }
+
+                System.out.println("Invalid order menu option. Please try again.");
+            }
             switch (orderChoice) {
 
                 case "1":
