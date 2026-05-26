@@ -5,6 +5,7 @@ import com.pluralsight.models.Drink;
 import java.util.Scanner;
 import com.pluralsight.models.Chips;
 import com.pluralsight.models.Sandwich;
+import com.pluralsight.util.ReceiptWriter;
 
 public class Application {
 
