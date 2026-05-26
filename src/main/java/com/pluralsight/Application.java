@@ -18,7 +18,18 @@ public class Application {
 
         while (running) {
 
-            String choice = ui.showHomeScreen();
+            String choice;
+
+            while (true) {
+
+                choice = ui.showHomeScreen();
+
+                if (choice.equals("1") || choice.equals("0")) {
+                    break;
+                }
+
+                System.out.println("Invalid menu option. Please try again.");
+            }
 
             switch (choice) {
 
