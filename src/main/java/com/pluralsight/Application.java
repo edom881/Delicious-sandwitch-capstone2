@@ -11,6 +11,7 @@ import com.pluralsight.ui.UserInterface;
 public class Application {
 
     static Scanner scanner = new Scanner(System.in);
+    static UserInterface ui = new UserInterface();
 
     public static void main(String[] args) {
         boolean running = true;
