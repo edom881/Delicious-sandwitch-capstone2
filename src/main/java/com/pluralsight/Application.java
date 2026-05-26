@@ -73,8 +73,13 @@ public class Application {
                         if (meat.equalsIgnoreCase("done")) {
                             break;
                         }
+                        System.out.print("Would you like extra meat? (yes/no): ");
+                        String extraMeatAnswer = scanner.nextLine();
 
-                        sandwich.addMeat(meat);
+                        boolean extraMeat = extraMeatAnswer.equalsIgnoreCase("yes");
+
+                        sandwich.addMeat(meat, extraMeat);
+
                     }
 
 
