@@ -81,6 +81,9 @@ public class Application {
                     order.addSandwich(sandwich);
 
                     System.out.println("Sandwich added to order.");
+
+                    System.out.println("Add cheeses one at a time. Type done when finished.");
+
                     break;
                 case "2":
                     System.out.print("Enter drink flavor: ");
