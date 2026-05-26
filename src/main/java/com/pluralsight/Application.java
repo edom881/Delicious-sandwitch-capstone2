@@ -113,6 +113,8 @@ public class Application {
                         if (sauce.equalsIgnoreCase("done")) {
                             break;
                         }
+                        sandwich.addSauce(sauce);
+                    }
 
                     break;
                 case "2":
