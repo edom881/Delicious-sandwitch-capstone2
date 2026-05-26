@@ -8,6 +8,6 @@ Sauces: []
 Price: $5.50
 
 small apple drink - $2.00
-s chips - $1.50
+s chips - $ 1.50
 
 Total Price: $9.00
