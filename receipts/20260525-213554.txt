@@ -1,0 +1,13 @@
+===== ORDER SUMMARY =====
+4" white sandwich
+Toasted: false
+Meats: []
+Cheeses: []
+Toppings: []
+Sauces: []
+Price: $5.50
+
+small mango drink - $2.00
+onion flavour chips - $1.50
+
+Total Price: $9.00
