@@ -66,8 +66,17 @@ public class Application {
 
                     System.out.println("Add meats one at a time. Type done when finished.");
 
+                    while (true) {
+                        System.out.print("Enter meat (steak, ham, salami, roast beef, chicken, bacon): ");
+                        String meat = scanner.nextLine();
 
+                        if (meat.equalsIgnoreCase("done")) {
+                            break;
+                        }
+
+                        sandwich.addMeat(meat);
                     }
+
 
                     order.addSandwich(sandwich);
 
