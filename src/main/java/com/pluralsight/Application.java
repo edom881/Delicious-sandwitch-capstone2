@@ -83,9 +83,6 @@ public class Application {
                     }
 
 
-                    order.addSandwich(sandwich);
-
-                    System.out.println("Sandwich added to order.");
 
                     System.out.println("Add cheeses one at a time. Type done when finished.");
                     while (true) {
@@ -102,6 +99,8 @@ public class Application {
                         boolean extraCheese = extraCheeseAnswer.equalsIgnoreCase("yes");
 
                         sandwich.addCheese(cheese, extraCheese);
+
+
                     }
 
                     System.out.println("Add regular toppings one at a time. Type done when finished.");
@@ -124,7 +123,12 @@ public class Application {
                             break;
                         }
                         sandwich.addSauce(sauce);
+
                     }
+                    order.addSandwich(sandwich);
+
+                    System.out.println("Sandwich added to order.");
+
 
                     break;
                 case "2":

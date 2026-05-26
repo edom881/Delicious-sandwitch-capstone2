@@ -53,10 +53,12 @@ public class Sandwich {
             price = 8.50;
         }
     }
+
     // adds meat to sandwich
-    public void addMeat(String meat, boolean extra ) {
+    public void addMeat(String meat, boolean extra) {
 
         meats.add(meat);
+
         // regular meat pricing
         if (size == 4) {
             price += 1.00;
@@ -65,17 +67,13 @@ public class Sandwich {
             if (extra) {
                 price += 0.50;
             }
-        }
-
-        else if (size == 8) {
+        } else if (size == 8) {
             price += 2.00;
 
             if (extra) {
                 price += 1.00;
             }
-        }
-
-        else if (size == 12) {
+        } else if (size == 12) {
             price += 3.00;
 
             if (extra) {
@@ -83,35 +81,15 @@ public class Sandwich {
             }
         }
 
-        // adds meat price based on sandwich size
-        if (size == 4) {
-            price += 1.00;
-        }
-        else if (size == 8) {
-            price += 2.00;
-        }
-        else if (size == 12) {
-            price += 3.00;
-        }
+
     }
 
     // adds cheese to sandwich
     public void addCheese(String cheese, boolean extra) {
+
         cheeses.add(cheese);
 
-
-
         // adds cheese price based on sandwich size
-        if (size == 4) {
-            price += 0.75;
-        }
-        else if (size == 8) {
-            price += 1.50;
-        }
-        else if (size == 12) {
-            price += 2.25;
-        }
-        // regular cheese pricing
         if (size == 4) {
             price += 0.75;
 
