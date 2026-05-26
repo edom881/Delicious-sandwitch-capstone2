@@ -64,6 +64,9 @@ public class Application {
 
                             sandwichSize = Integer.parseInt(scanner.nextLine());
 
+                            if (sandwichSize != 4 && sandwichSize != 8 && sandwichSize != 12) {
+                                System.out.println("Invalid size. Please enter 4, 8, or 12.");
+                            }
 
 
                         } catch (NumberFormatException e) {
