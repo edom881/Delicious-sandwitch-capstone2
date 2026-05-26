@@ -54,8 +54,35 @@ public class Sandwich {
         }
     }
     // adds meat to sandwich
-    public void addMeat(String meat) {
+    public void addMeat(String meat, boolean extra ) {
+
         meats.add(meat);
+        // regular meat pricing
+        if (size == 4) {
+            price += 1.00;
+
+            // extra meat pricing
+            if (extra) {
+                price += 0.50;
+            }
+        }
+
+        else if (size == 8) {
+            price += 2.00;
+
+            if (extra) {
+                price += 1.00;
+            }
+        }
+
+        else if (size == 12) {
+            price += 3.00;
+
+            if (extra) {
+                price += 1.50;
+            }
+        }
+
         // adds meat price based on sandwich size
         if (size == 4) {
             price += 1.00;
