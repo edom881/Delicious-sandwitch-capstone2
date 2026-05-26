@@ -44,15 +44,9 @@ public class Application {
         boolean ordering = true;
 
         while (ordering) {
-            System.out.println("\n=== Order Screen ===");
-            System.out.println("1) Add Sandwich");
-            System.out.println("2) Add Drink");
-            System.out.println("3) Add Chips");
-            System.out.println("4) Checkout");
-            System.out.println("0) Cancel Order");
-            System.out.print("Enter choice: ");
 
-            String orderChoice = scanner.nextLine();
+
+            String orderChoice =  ui.showOrderScreen();
 
             switch (orderChoice) {
 
