@@ -54,9 +54,23 @@ public class Application {
                     System.out.print("Enter bread type (white, wheat, rye, wrap): ");
                     String bread = scanner.nextLine();
 
-                    System.out.print("Enter sandwich size (4, 8, 12): ");
-                    int sandwichSize = Integer.parseInt(scanner.nextLine());
+                    int sandwichSize = 0;
 
+                    while (sandwichSize != 4 && sandwichSize != 8 && sandwichSize != 12) {
+
+                        System.out.print("Enter sandwich size (4, 8, 12): ");
+
+                        try {
+
+                            sandwichSize = Integer.parseInt(scanner.nextLine());
+
+
+
+                        } catch (NumberFormatException e) {
+
+                            System.out.println("Invalid input. Please enter a number.");
+                        }
+                    }
                     System.out.print("Would you like it toasted? (yes/no): ");
                     String toastedAnswer = scanner.nextLine();
 
