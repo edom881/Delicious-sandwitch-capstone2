@@ -2,6 +2,8 @@ package com.pluralsight;
 
 import com.pluralsight.models.Order;
 import com.pluralsight.models.Drink;
+import com.pluralsight.models.BLT;
+import com.pluralsight.models.PhillyCheeseSteak;
 
 import java.util.Scanner;
 
@@ -80,6 +82,34 @@ public class Application {
             switch (orderChoice) {
 
                 case "1":
+                    System.out.println("1) Custom Sandwich");
+                    System.out.println("2) BLT");
+                    System.out.println("3) Philly Cheesesteak");
+                    System.out.print("Choose sandwich type: ");
+                    String sandwichChoice = scanner.nextLine();
+                    if (sandwichChoice.equals("2")) {
+
+                        BLT blt = new BLT();
+
+                        order.addItem(blt);
+
+                        System.out.println("BLT added to order.");
+
+                        break;
+                    }
+
+                    else if (sandwichChoice.equals("3")) {
+
+                        PhillyCheeseSteak philly = new PhillyCheeseSteak();
+
+                        order.addItem(philly);
+
+                        System.out.println("Philly Cheesesteak added to order.");
+
+                        break;
+                    }
+
+
                     System.out.print("Enter bread type (white, wheat, rye, wrap): ");
                     String bread = scanner.nextLine();
 
