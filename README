@@ -1,0 +1,282 @@
+🥪 Delicious-sandwitch-capstone-2
+
+📖 Project Overview
+
+The Delicious Sandwich Shop Application is a fully object-oriented Java console application that simulates a real sandwich shop ordering system.
+
+This capstone project demonstrates:
+
+✅ Object-Oriented Programming (OOP)
+✅ Interfaces & Polymorphism
+✅ Inheritance
+✅ File Handling & Receipt Saving
+✅ Input Validation
+✅ Unit Testing with JUnit 5
+✅ Professional Package Organization
+✅ Git & GitHub Version Control
+
+Customers can:
+
+Create custom sandwiches
+Add drinks and chips
+Add toppings and sauces
+Choose extra meat and extra cheese
+Order specialty sandwiches
+View order summaries
+Generate receipt files automatically
+✨ Features
+🏠 Home Screen
+Start a new order
+Exit application
+Menu input validation
+🥪 Sandwich Customization
+
+Customers can choose:
+
+Bread type
+Sandwich size
+Toasted option
+Meats
+Extra meat
+Cheeses
+Extra cheese
+Regular toppings
+Sauces
+🌟 Specialty Sandwiches
+
+The application includes bonus specialty sandwiches using inheritance:
+
+BLT
+Philly Cheesesteak
+
+These sandwiches automatically include preset ingredients and pricing.
+
+💲 Dynamic Pricing
+
+The application calculates pricing based on:
+
+Sandwich size
+Premium meats
+Premium cheeses
+Extra meat upgrades
+Extra cheese upgrades
+Drinks
+Chips
+🥤 Drinks
+
+Customers can select:
+
+Drink flavor
+Drink size
+🍟 Chips
+
+Customers can add chips to any order.
+
+🧾 Checkout System
+
+The system:
+
+Displays order summaries
+Calculates total pricing
+Confirms completed orders
+💾 Receipt Saving
+
+Orders are automatically saved as receipt text files.
+
+Example:
+
+20260527-153025.txt
+✅ Input Validation
+
+The application safely handles:
+
+Invalid menu choices
+Incorrect sandwich sizes
+Invalid numeric input
+Unsupported selections
+🧪 Unit Testing
+
+JUnit tests were created using the professional:
+
+Arrange → Act → Assert
+
+structure.
+
+Unit tests include:
+
+Sandwich pricing tests
+Drink pricing tests
+Chips pricing tests
+Order total tests
+Order summary tests
+🧠 Object-Oriented Programming Concepts Used
+📦 Classes & Objects
+
+Custom classes include:
+
+Sandwich
+Drink
+Chips
+Order
+Topping
+ReceiptWriter
+UserInterface
+🔗 Interfaces
+
+The OrderItem interface standardizes:
+
+getPrice()
+getSummary()
+
+across all menu items.
+
+🔄 Polymorphism
+
+The Order class stores all items using:
+
+ArrayList<OrderItem>
+
+allowing multiple object types to behave through a shared interface.
+
+🧬 Inheritance
+
+Specialty sandwiches extend the Sandwich class:
+
+Sandwich
+   ↑
+BLT
+   ↑
+PhillyCheeseSteak
+
+This demonstrates reusable code and subclass behavior.
+
+🔒 Encapsulation
+
+Private fields and public methods are used throughout the application.
+
+🗂 Modular Design
+
+The project is separated into packages:
+
+com.pluralsight
+com.pluralsight.models
+com.pluralsight.ui
+com.pluralsight.util
+
+🗂 Class Diagram
+(src/main/resources/delicious project_class_diagram..pdf)
+
+
+🏗 Project Structure
+src
+├── main
+│   └── java
+│       └── com.pluralsight
+│           ├── Application.java
+│           │
+│           ├── models
+│           │   ├── Sandwich.java
+│           │   ├── BLT.java
+│           │   ├── PhillyCheeseSteak.java
+│           │   ├── Drink.java
+│           │   ├── Chips.java
+│           │   ├── Order.java
+│           │   ├── Topping.java
+│           │   └── OrderItem.java
+│           │
+│           ├── ui
+│           │   └── UserInterface.java
+│           │
+│           └── util
+│               └── ReceiptWriter.java
+│
+└── test
+    └── java
+        └── com.pluralsight.models
+            ├── SandwichTest.java
+            ├── DrinkTest.java
+            ├── ChipsTest.java
+            └── OrderTest.java
+🛠 Technologies Used
+Technology	Purpose
+☕ Java 17	Main programming language
+📦 Maven	Project management
+💻 IntelliJ IDEA	Development environment
+🌐 Git & GitHub	Version control
+🧪 JUnit 5	Unit testing
+▶️ How to Run the Application
+1️⃣ Clone Repository
+git clone <repository-url>
+2️⃣ Open in IntelliJ IDEA
+
+Open the project as a Maven project.
+
+3️⃣ Run Application
+
+Run:
+
+Application.java
+🥪 Example Workflow
+1) New Order
+1) Add Sandwich
+2) Add Drink
+3) Add Chips
+4) Checkout
+Example Sandwich
+Bread: White
+Size: 8"
+Toasted: Yes
+Meat: Bacon
+Extra Meat: Yes
+Cheese: Cheddar
+Extra Cheese: Yes
+Toppings: Lettuce, Tomatoes
+Sauce: Ranch
+🚧 Challenges Faced During Development
+
+Some challenges encountered during development included:
+
+Preventing duplicate pricing calculations
+Managing polymorphism with interfaces
+Organizing packages and project structure
+Implementing inheritance correctly
+Implementing receipt saving functionality
+Handling input validation safely
+Debugging order flow and pricing logic
+
+These challenges improved debugging, problem-solving, and software design skills.
+
+🚀 Future Improvements
+
+Possible future enhancements include:
+
+JavaFX GUI version
+Database integration
+Online ordering system
+Signature sandwich presets
+Employee/admin management
+Inventory tracking
+Customer accounts
+Sales reporting dashboard
+
+
+👩🏽‍💻 Author
+Edom Gezahegn
+
+Year Up Java Development Program
+
+🎯 Final Notes
+
+The DELI-cious Sandwich Shop Application represents a complete Java capstone project demonstrating:
+
+✅ Object-Oriented Programming
+✅ Interfaces & Polymorphism
+✅ Inheritance
+✅ File Handling
+✅ Validation
+✅ Unit Testing
+✅ Modular Architecture
+✅ GitHub Project Organization
+✅ Professional Software Development Practices
+
+This project was built to simulate a realistic sandwich shop ordering system while applying real-world Java development concepts in a practical capstone environment.

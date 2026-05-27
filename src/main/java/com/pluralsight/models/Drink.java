@@ -19,20 +19,20 @@ public class Drink implements OrderItem {
         // sets drink price based on size
         if (size.equalsIgnoreCase("small")) {
             price = 2.00;
-        }
-        else if (size.equalsIgnoreCase("medium")) {
+        } else if (size.equalsIgnoreCase("medium")) {
             price = 2.50;
-        }
-        else if (size.equalsIgnoreCase("large")) {
+        } else if (size.equalsIgnoreCase("large")) {
             price = 3.00;
         }
     }
+
     // returns formatted drink information
     public String getSummary() {
 
         return size + " " + flavor +
                 " drink - $" + String.format("%.2f", price);
     }
+
     // returns drink price
     public double getPrice() {
         return price;

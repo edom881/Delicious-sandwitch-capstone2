@@ -1,7 +1,9 @@
 package com.pluralsight.models;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 public class SandwichTest {
     @Test
     public void getSandwichPrice_shouldCalculateCorrectPrice() {
@@ -15,5 +17,5 @@ public class SandwichTest {
         assertEquals(12.10, price, 0.01);
     }
 
-    }
+}
 

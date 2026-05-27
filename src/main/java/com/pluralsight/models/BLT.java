@@ -1,4 +1,5 @@
 package com.pluralsight.models;
+
 public class BLT extends Sandwich {
     // creates a default BLT sandwich
     public BLT() {
@@ -16,7 +17,6 @@ public class BLT extends Sandwich {
 
 
     }
-
 
 
 }

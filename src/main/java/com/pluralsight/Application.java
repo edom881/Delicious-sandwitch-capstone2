@@ -96,9 +96,7 @@ public class Application {
                         System.out.println("BLT added to order.");
 
                         break;
-                    }
-
-                    else if (sandwichChoice.equals("3")) {
+                    } else if (sandwichChoice.equals("3")) {
 
                         PhillyCheeseSteak philly = new PhillyCheeseSteak();
 
