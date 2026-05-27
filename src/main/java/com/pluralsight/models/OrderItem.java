@@ -1,6 +1,6 @@
 package com.pluralsight.models;
 
-public class OrderItem {
+public interface OrderItem {
     double getPrice();
 
     String getSummary();

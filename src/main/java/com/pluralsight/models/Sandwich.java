@@ -2,7 +2,7 @@ package com.pluralsight.models;
 
 import java.util.ArrayList;
 
-public class Sandwich {
+public class Sandwich implements OrderItem {
     // stores bread type selected by customer
     private String bread;
 
