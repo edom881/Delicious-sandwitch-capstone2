@@ -34,7 +34,6 @@ public class Sandwich {
         this.toasted = toasted;
 
 
-
         // initialize ArrayLists for sandwich ingredients
         this.meats = new ArrayList<>();
         this.cheeses = new ArrayList<>();
@@ -45,11 +44,9 @@ public class Sandwich {
         // sets base sandwich price based on size
         if (size == 4) {
             price = 5.50;
-        }
-        else if (size == 8) {
+        } else if (size == 8) {
             price = 7.00;
-        }
-        else if (size == 12) {
+        } else if (size == 12) {
             price = 8.50;
         }
     }
@@ -97,17 +94,13 @@ public class Sandwich {
             if (extra) {
                 price += 0.30;
             }
-        }
-
-        else if (size == 8) {
+        } else if (size == 8) {
             price += 1.50;
 
             if (extra) {
                 price += 0.60;
             }
-        }
-
-        else if (size == 12) {
+        } else if (size == 12) {
             price += 2.25;
 
             if (extra) {
@@ -115,14 +108,17 @@ public class Sandwich {
             }
         }
     }
+
     // adds regular topping to sandwich
     public void addTopping(String topping) {
         toppings.add(topping);
     }
+
     // adds sauce to sandwich
     public void addSauce(String sauce) {
         sauces.add(sauce);
     }
+
     // returns formatted sandwich information
     public String getSummary() {
 
@@ -135,12 +131,13 @@ public class Sandwich {
                 "Price: $" + String.format("%.2f", price);
 
     }
+
     // returns sandwich total price
     public double getPrice() {
         return price;
     }
 
-    }
+}
 
 
 

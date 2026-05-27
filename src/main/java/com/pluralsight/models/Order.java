@@ -20,6 +20,7 @@ public class Order {
         this.drinks = new ArrayList<>();
         this.chips = new ArrayList<>();
     }
+
     // adds sandwich to order
     public void addSandwich(Sandwich sandwich) {
         sandwiches.add(sandwich);
@@ -34,6 +35,7 @@ public class Order {
     public void addChips(Chips chip) {
         chips.add(chip);
     }
+
     // calculates full order total
     public double getTotal() {
 
@@ -56,6 +58,7 @@ public class Order {
 
         return total;
     }
+
     // returns full formatted order summary
     public String getOrderSummary() {
 

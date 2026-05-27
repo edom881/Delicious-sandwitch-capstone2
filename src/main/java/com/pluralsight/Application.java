@@ -2,7 +2,9 @@ package com.pluralsight;
 
 import com.pluralsight.models.Order;
 import com.pluralsight.models.Drink;
+
 import java.util.Scanner;
+
 import com.pluralsight.models.Chips;
 import com.pluralsight.models.Sandwich;
 import com.pluralsight.util.ReceiptWriter;
@@ -126,7 +128,6 @@ public class Application {
                     }
 
 
-
                     System.out.println("Add cheeses one at a time. Type done when finished.");
                     while (true) {
                         System.out.print("Enter cheese (american, provolone, cheddar, swiss): ");
@@ -212,8 +213,7 @@ public class Application {
                         System.out.println("Order confirmed!");
 
                         ordering = false;
-                    }
-                    else {
+                    } else {
 
                         System.out.println("Returning to order screen.");
                     }
