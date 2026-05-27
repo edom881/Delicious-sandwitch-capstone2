@@ -10,9 +10,7 @@ public class Order {
     // constructor initializes order collections
     public Order() {
 
-        this.sandwiches = new ArrayList<>();
-        this.drinks = new ArrayList<>();
-        this.chips = new ArrayList<>();
+        this.items = new ArrayList<>();
     }
 
     // adds sandwich to order
