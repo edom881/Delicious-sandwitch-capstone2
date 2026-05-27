@@ -1,6 +1,6 @@
 package com.pluralsight.models;
 
-public class Chips {
+public class Chips implements OrderItem {
 
     // stores chip type selected by customer
     private String type;

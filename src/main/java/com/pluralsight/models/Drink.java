@@ -1,6 +1,6 @@
 package com.pluralsight.models;
 
-public class Drink {
+public class Drink implements OrderItem {
     // stores drink flavor
     private String flavor;
 
