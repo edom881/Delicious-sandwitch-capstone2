@@ -13,20 +13,11 @@ public class Order {
         this.items = new ArrayList<>();
     }
 
-    // adds sandwich to order
-    public void addSandwich(Sandwich sandwich) {
-        sandwiches.add(sandwich);
+    // adds item to order
+    public void addItem(OrderItem item) {
+        items.add(item);
     }
 
-    // adds drink to order
-    public void addDrink(Drink drink) {
-        drinks.add(drink);
-    }
-
-    // adds chips to order
-    public void addChips(Chips chip) {
-        chips.add(chip);
-    }
 
     // calculates full order total
     public double getTotal() {
