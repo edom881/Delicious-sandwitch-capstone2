@@ -170,7 +170,7 @@ public class Application {
                         sandwich.addSauce(sauce);
 
                     }
-                    order.addSandwich(sandwich);
+                    order.addItem(sandwich);
 
                     System.out.println("Sandwich added to order.");
 
@@ -184,7 +184,7 @@ public class Application {
                     String size = scanner.nextLine();
 
                     Drink drink = new Drink(flavor, size);
-                    order.addDrink(drink);
+                    order.addItem(drink);
 
                     System.out.println("Drink added to order.");
                     break;
@@ -193,7 +193,7 @@ public class Application {
                     String chipType = scanner.nextLine();
 
                     Chips chips = new Chips(chipType);
-                    order.addChips(chips);
+                    order.addItem(chips);
 
                     System.out.println("Chips added to order.");
                     break;

@@ -24,19 +24,9 @@ public class Order {
 
         double total = 0;
 
-        // adds sandwich prices
-        for (Sandwich sandwich : sandwiches) {
-            total += sandwich.getPrice();
-        }
 
-        // adds drink prices
-        for (Drink drink : drinks) {
-            total += drink.getPrice();
-        }
-
-        // adds chips prices
-        for (Chips chip : chips) {
-            total += chip.getPrice();
+        for (OrderItem item : items) {
+            total += item.getPrice();
         }
 
         return total;
@@ -45,22 +35,12 @@ public class Order {
     // returns full formatted order summary
     public String getOrderSummary() {
 
-        String summary = "===== ORDER SUMMARY =====\n";
+        String summary = "";
 
-        // display sandwiches
-        for (Sandwich sandwich : sandwiches) {
-            summary += sandwich.getSummary() + "\n\n";
+        for (OrderItem item : items) {
+            summary += item.getSummary() + "\n";
         }
 
-        // display drinks
-        for (Drink drink : drinks) {
-            summary += drink.getSummary() + "\n";
-        }
-
-        // display chips
-        for (Chips chip : chips) {
-            summary += chip.getSummary() + "\n";
-        }
 
         summary += "\nTotal Price: $" +
                 String.format("%.2f", getTotal());
