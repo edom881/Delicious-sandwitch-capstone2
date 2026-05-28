@@ -11,6 +11,7 @@ import java.util.Scanner;
 import com.pluralsight.models.Chips;
 import com.pluralsight.models.Sandwich;
 import com.pluralsight.util.ReceiptWriter;
+import com.pluralsight.util.UIDecorator;
 import com.pluralsight.ui.UserInterface;
 
 public class Application {
@@ -19,6 +20,7 @@ public class Application {
     static UserInterface ui = new UserInterface();
 
     public static void main(String[] args) {
+        UIDecorator.printWelcomeBanner();
         boolean running = true;
 
         while (running) {
@@ -33,7 +35,7 @@ public class Application {
                     break;
                 }
 
-                System.out.println("Invalid menu option. Please try again.");
+                UIDecorator.printError("Invalid menu option. Please try again.");
             }
 
             switch (choice) {
@@ -45,11 +47,11 @@ public class Application {
 
                 case "0":
                     running = false;
-                    System.out.println("Thank you for visiting DELI-cious!");
+                    UIDecorator.printGoodbye();
                     break;
 
                 default:
-                    System.out.println("Invalid choice. Try again.");
+                    UIDecorator.printError("Invalid choice. Try again.");
             }
         }
 
@@ -77,15 +79,16 @@ public class Application {
                     break;
                 }
 
-                System.out.println("Invalid order menu option. Please try again.");
+                UIDecorator.printError("Invalid order menu option. Please try again.");
             }
             switch (orderChoice) {
 
                 case "1":
+                    UIDecorator.printSection("Sandwich Menu");
                     System.out.println("1) Custom Sandwich");
                     System.out.println("2) BLT");
                     System.out.println("3) Philly Cheesesteak");
-                    System.out.print("Choose sandwich type: ");
+                    UIDecorator.prompt("Choose sandwich type: ");
                     String sandwichChoice = scanner.nextLine();
                     if (sandwichChoice.equals("2")) {
 
@@ -93,7 +96,7 @@ public class Application {
 
                         order.addItem(blt);
 
-                        System.out.println("BLT added to order.");
+                        UIDecorator.printSuccess("BLT added to order.");
 
                         break;
                     } else if (sandwichChoice.equals("3")) {
@@ -102,52 +105,52 @@ public class Application {
 
                         order.addItem(philly);
 
-                        System.out.println("Philly Cheesesteak added to order.");
+                        UIDecorator.printSuccess("Philly Cheesesteak added to order.");
 
                         break;
                     }
 
 
-                    System.out.print("Enter bread type (white, wheat, rye, wrap): ");
+                    UIDecorator.prompt("Enter bread type (white, wheat, rye, wrap): ");
                     String bread = scanner.nextLine();
 
                     int sandwichSize = 0;
 
                     while (sandwichSize != 4 && sandwichSize != 8 && sandwichSize != 12) {
 
-                        System.out.print("Enter sandwich size (4, 8, 12): ");
+                        UIDecorator.prompt("Enter sandwich size (4, 8, 12): ");
 
                         try {
 
                             sandwichSize = Integer.parseInt(scanner.nextLine());
 
                             if (sandwichSize != 4 && sandwichSize != 8 && sandwichSize != 12) {
-                                System.out.println("Invalid size. Please enter 4, 8, or 12.");
+                                UIDecorator.printError("Invalid size. Please enter 4, 8, or 12.");
                             }
 
 
                         } catch (NumberFormatException e) {
 
-                            System.out.println("Invalid input. Please enter a number.");
+                            UIDecorator.printError("Invalid input. Please enter a number.");
                         }
                     }
-                    System.out.print("Would you like it toasted? (yes/no): ");
+                    UIDecorator.prompt("Would you like it toasted? (yes/no): ");
                     String toastedAnswer = scanner.nextLine();
 
                     boolean toasted = toastedAnswer.equalsIgnoreCase("yes");
 
                     Sandwich sandwich = new Sandwich(bread, sandwichSize, toasted);
 
-                    System.out.println("Add meats one at a time. Type done when finished.");
+                    UIDecorator.printInfo("Add meats one at a time. Type done when finished.");
 
                     while (true) {
-                        System.out.print("Enter meat (steak, ham, salami, roast beef, chicken, bacon): ");
+                        UIDecorator.prompt("Enter meat (steak, ham, salami, roast beef, chicken, bacon): ");
                         String meat = scanner.nextLine();
 
                         if (meat.equalsIgnoreCase("done")) {
                             break;
                         }
-                        System.out.print("Would you like extra meat? (yes/no): ");
+                        UIDecorator.prompt("Would you like extra meat? (yes/no): ");
                         String extraMeatAnswer = scanner.nextLine();
 
                         boolean extraMeat = extraMeatAnswer.equalsIgnoreCase("yes");
@@ -157,16 +160,16 @@ public class Application {
                     }
 
 
-                    System.out.println("Add cheeses one at a time. Type done when finished.");
+                    UIDecorator.printInfo("Add cheeses one at a time. Type done when finished.");
                     while (true) {
-                        System.out.print("Enter cheese (american, provolone, cheddar, swiss): ");
+                        UIDecorator.prompt("Enter cheese (american, provolone, cheddar, swiss): ");
                         String cheese = scanner.nextLine();
 
                         if (cheese.equalsIgnoreCase("done")) {
                             break;
                         }
 
-                        System.out.print("Would you like extra cheese? (yes/no): ");
+                        UIDecorator.prompt("Would you like extra cheese? (yes/no): ");
                         String extraCheeseAnswer = scanner.nextLine();
 
                         boolean extraCheese = extraCheeseAnswer.equalsIgnoreCase("yes");
@@ -176,9 +179,9 @@ public class Application {
 
                     }
 
-                    System.out.println("Add regular toppings one at a time. Type done when finished.");
+                    UIDecorator.printInfo("Add regular toppings one at a time. Type done when finished.");
                     while (true) {
-                        System.out.print("Enter topping (lettuce, peppers, onions, tomatoes, jalapeños, cucumbers, pickles, guacamole, mushrooms): ");
+                        UIDecorator.prompt("Enter topping (lettuce, peppers, onions, tomatoes, jalapeños, cucumbers, pickles, guacamole, mushrooms): ");
                         String topping = scanner.nextLine();
 
                         if (topping.equalsIgnoreCase("done")) {
@@ -186,10 +189,10 @@ public class Application {
                         }
                         sandwich.addTopping(topping);
                     }
-                    System.out.println("Add sauces one at a time. Type done when finished.");
+                    UIDecorator.printInfo("Add sauces one at a time. Type done when finished.");
 
                     while (true) {
-                        System.out.print("Enter sauce (mayo, mustard, ketchup, ranch, thousand islands, vinaigrette): ");
+                        UIDecorator.prompt("Enter sauce (mayo, mustard, ketchup, ranch, thousand islands, vinaigrette): ");
                         String sauce = scanner.nextLine();
 
                         if (sauce.equalsIgnoreCase("done")) {
@@ -200,60 +203,61 @@ public class Application {
                     }
                     order.addItem(sandwich);
 
-                    System.out.println("Sandwich added to order.");
+                    UIDecorator.printSuccess("Sandwich added to order.");
 
 
                     break;
                 case "2":
-                    System.out.print("Enter drink flavor: ");
+                    UIDecorator.printSection("Add Drink");
+                    UIDecorator.prompt("Enter drink flavor: ");
                     String flavor = scanner.nextLine();
 
-                    System.out.print("Enter drink size (small, medium, large): ");
+                    UIDecorator.prompt("Enter drink size (small, medium, large): ");
                     String size = scanner.nextLine();
 
                     Drink drink = new Drink(flavor, size);
                     order.addItem(drink);
 
-                    System.out.println("Drink added to order.");
+                    UIDecorator.printSuccess("Drink added to order.");
                     break;
                 case "3":
-                    System.out.print("Enter chip type: ");
+                    UIDecorator.printSection("Add Chips");
+                    UIDecorator.prompt("Enter chip type: ");
                     String chipType = scanner.nextLine();
 
                     Chips chips = new Chips(chipType);
                     order.addItem(chips);
 
-                    System.out.println("Chips added to order.");
+                    UIDecorator.printSuccess("Chips added to order.");
                     break;
                 case "4":
-                    System.out.println("\n===== CHECKOUT =====");
+                    UIDecorator.printSection("Checkout");
+                    UIDecorator.printInfo("Order Summary:");
+                    UIDecorator.printSeparator();
                     System.out.println(order.getOrderSummary());
+                    UIDecorator.printSeparator();
 
-                    System.out.println("\n1) Confirm");
-                    System.out.println("0) Cancel");
+                    UIDecorator.printMenuOption(1, "Confirm");
+                    UIDecorator.printMenuOption(0, "Cancel");
 
-                    System.out.print("Enter choice: ");
+                    UIDecorator.prompt("Enter choice: ");
                     String checkoutChoice = scanner.nextLine();
 
                     if (checkoutChoice.equals("1")) {
-
                         ReceiptWriter.saveReceipt(order);
-
-                        System.out.println("Order confirmed!");
-
+                        UIDecorator.printSuccess("Order confirmed!");
                         ordering = false;
                     } else {
-
-                        System.out.println("Returning to order screen.");
+                        UIDecorator.printInfo("Returning to order screen.");
                     }
 
                     break;
                 case "0":
                     ordering = false;
-                    System.out.println("Order canceled. Returning home.");
+                    UIDecorator.printInfo("Order canceled. Returning home.");
                     break;
                 default:
-                    System.out.println("Invalid choice. Try again.");
+                    UIDecorator.printError("Invalid choice. Try again.");
             }
         }
     }

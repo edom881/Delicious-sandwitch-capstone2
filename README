@@ -2,7 +2,10 @@
 
 📖 Project Overview
 
-The Delicious Sandwich Shop Application is a fully object-oriented Java console application that simulates a real sandwich shop ordering system.
+This repository contains a desktop Point of Sale (POS) application designed for DELI-cious, a rapidly growing, custom sandwich shop. Historically, the business managed its highly customizable customer orders manually using paper tickets. To support business growth and lay the groundwork for future online ordering, this application automates the entire in-store order creation, customization, price calculation, and receipt generation pipeline.
+
+Built entirely from scratch as a console-based interface, the application serves as a comprehensive showcase of Object-Oriented Analysis and Design (OOAD) principles.
+
 
 This capstone project demonstrates:
 
@@ -120,6 +123,7 @@ Chips
 Order
 Topping
 ReceiptWriter
+UIDecorator
 UserInterface
 🔗 Interfaces
 
@@ -188,7 +192,8 @@ src
 │           │   └── UserInterface.java
 │           │
 │           └── util
-│               └── ReceiptWriter.java
+│               ├── ReceiptWriter.java
+│               └── UIDecorator.java
 │
 └── test
     └── java
