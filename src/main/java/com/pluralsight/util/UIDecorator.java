@@ -46,7 +46,7 @@ public class UIDecorator {
         System.out.println(CYAN + BOLD +
                 "  ╔════════════════════════════════════════╗" + RESET);
         System.out.println(CYAN + BOLD +
-                "  ║   Thank you for visiting DELI-cious!   ║" + RESET);
+                "  ║   Thank you for visiting Delicious!   ║" + RESET);
         System.out.println(CYAN + BOLD +
                 "  ║         See you next time! 👋          ║" + RESET);
         System.out.println(CYAN + BOLD +
@@ -56,7 +56,7 @@ public class UIDecorator {
 
     public static void printSectionHeader(String title) {
         System.out.println();
-        System.out.println(BOLD + BLUE + "  ┌─ " + title.toUpperCase() + " ─┐" + RESET);
+        System.out.println(BOLD + BLUE + "   ┌─ " + title.toUpperCase() + " ─┐" + RESET);
     }
 
     public static void printSubMenu(String title) {

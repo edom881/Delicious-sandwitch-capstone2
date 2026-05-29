@@ -5,14 +5,10 @@ public class BLT extends Sandwich {
     public BLT() {
 
         super("white", 8, true);
-
         addMeat("bacon", false);
-
         addCheese("cheddar", false);
-
         addTopping("lettuce");
         addTopping("tomatoes");
-
         addSauce("ranch");
 
 

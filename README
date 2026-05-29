@@ -97,6 +97,7 @@ Invalid menu choices
 Incorrect sandwich sizes
 Invalid numeric input
 Unsupported selections
+Centralized validation is handled by the InputValidator utility class for prompt handling, number parsing, and yes/no responses.
 🧪 Unit Testing
 
 JUnit tests were created using the professional:
@@ -124,6 +125,7 @@ Order
 Topping
 ReceiptWriter
 UIDecorator
+InputValidator
 UserInterface
 🔗 Interfaces
 
@@ -192,6 +194,7 @@ src
 │           │   └── UserInterface.java
 │           │
 │           └── util
+│               ├── InputValidator.java
 │               ├── ReceiptWriter.java
 │               └── UIDecorator.java
 │
@@ -211,7 +214,7 @@ Technology	Purpose
 🧪 JUnit 5	Unit testing
 ▶️ How to Run the Application
 1️⃣ Clone Repository
-git clone <repository-url>
+git clone https://github.com/edom881/Delicious-sandwitch-capstone2.git
 2️⃣ Open in IntelliJ IDEA
 
 Open the project as a Maven project.
